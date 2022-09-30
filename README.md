@@ -23,7 +23,7 @@ For my project, I decided to collect data on points of interest in the town of L
 - for Yelp: referred to https://www.yelp.com/developers/documentation/v3/authentication to get the API Key, authorization format & 
 referred to https://www.yelp.com/developers/documentation/v3/business_search to get the url, query parameters (saved API_Key to environment variables)
 - sent the requests through Postman first to test it, and saved the responses to text files
-- sent the request using Python requests module
+- sent the requests using Python requests module
 
 ### Step 3 - Parsed API responses
 - used pprint and JSON to view the response and determine which POI details were available
@@ -35,7 +35,7 @@ referred to https://www.yelp.com/developers/documentation/v3/business_search to 
 - used .shape, .info() and .describe() to understand the size and contents of my dataframes
 
 ### Step 6 - Created Entity-Relationship Diagram
-- identified key entities (e.g., POI, category, location, phone number) and their attributes, then sketched an ERD and identified the relationships between entities and the cardinality of those relationships.
+- identified key entities (e.g., POI, category, location, phone number) and their attributes, then sketched an ERD and identified the relationships between entities and the cardinality of those relationships
 
 ### Step 7 - Created SQLite Database
 - sliced original dataframes to create a new dataframe corresponding with each entity (POI, categories, location, phone number, & a POI_category intersection table to join POI and categories, allowing for a many-to-many relationship between POI and category)
@@ -43,6 +43,7 @@ referred to https://www.yelp.com/developers/documentation/v3/business_search to 
 - defined a function execute_query() to execute the given query
 - created each table and inserted values
 - performed SQL queries in the data/queries.sql file to confirm tables were created properly and could be joined on corresponding primary and foreign keys
+- one major challenge here was that the categories in the API response were sometimes listed with a leading space and other times not. In order to create a unique list for my category dataframe, I first had to strip those leading spaces.
 
 ### Step 8 - Compared Results from FourSquare and Yelp API
 - used pandas to describe, sort, and group data to compare the quality of the coverage of the two APIs
