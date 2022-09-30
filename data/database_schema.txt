@@ -1,0 +1,21 @@
+CREATE TABLE poi (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  price TEXT,
+  rating REAL,
+  review_count INTEGER
+);
+CREATE TABLE sqlite_sequence(name,seq);
+CREATE TABLE phone_number (
+  display_phone TEXT NOT NULL,
+  poi_id INTEGER NOT NULL,
+  FOREIGN KEY (poi_id) REFERENCES poi (id)
+);
+CREATE TABLE category (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  category TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS "POI_category" (
+"id" INTEGER,
+  "poi_id" INTEGER
+);
