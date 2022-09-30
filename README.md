@@ -22,7 +22,7 @@ For my project, I decided to collect data on points of interest in the town of L
 - for Foursquare: referred to https://developer.foursquare.com/reference/place-search to get the authorization format, url, and query parameters for the API call (already had API_Key saved to environment variables from previous exercises)
 - for Yelp: referred to https://www.yelp.com/developers/documentation/v3/authentication to get the API Key, authorization format & 
 referred to https://www.yelp.com/developers/documentation/v3/business_search to get the url, query parameters (saved API_Key to environment variables)
-- sent the requests through Postman first to test it, and saved the responses to text files
+- sent the requests through Postman first to test it, and saved the responses to text files [Foursquare Response](\data\response_foursquare_postman) & [Yelp Response](data\response_yelp_postman)
 - sent the requests using Python requests module
 
 ### Step 4 - Parsed API responses
@@ -54,8 +54,8 @@ referred to https://www.yelp.com/developers/documentation/v3/business_search to 
     - DEPTH: The FourSquare API only returned 10 points of interest, whereas the Yelp API returned 20 points of interest in the same search radius (1000m from The Wild Poppy)
     - BREADTH: Yelp provides a wider variety of information for each point of interest. It has 24 items describing each point of interest, including many that are not provided by the FourSquare API (rating, review_count, price informatiom, etc.)
 - The greater depth and breadth of data collected from the Yelp API allows for answering questions like:
-    - What are the top 10 restaurants according to their rating?
-    - Which category of restaurant has the best ratings in Ladysmith? (top 3 are Food Trucks, Vegan, and Mexican restaurants)
+    - 'What are the top 10 restaurants according to their rating?' Since the Foursquare API didn't including rating information, I wouldn't be able to answer that question with the Foursqare response.
+    - 'Which category of restaurant has the best ratings in Ladysmith?' (top 3 are Food Trucks, Vegan, and Mexican restaurants)
 
 ## Challenges 
 - converting the json object into a dataframe that lists each category individually
