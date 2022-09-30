@@ -22,7 +22,7 @@ For my project, I decided to collect data on points of interest in the town of L
 - for Foursquare: referred to https://developer.foursquare.com/reference/place-search to get the authorization format, url, and query parameters for the API call (already had API_Key saved to environment variables from previous exercises)
 - for Yelp: referred to https://www.yelp.com/developers/documentation/v3/authentication to get the API Key, authorization format & 
 referred to https://www.yelp.com/developers/documentation/v3/business_search to get the url, query parameters (saved API_Key to environment variables)
-- sent the requests through Postman first to test it, and saved the responses to text files [Foursquare Response](\data\response_foursquare_postman) & [Yelp Response](data\response_yelp_postman)
+- sent the requests through Postman first to test it, and saved the responses to text files [Foursquare Response](/data/response_foursquare_postman) & [Yelp Response](data/response_yelp_postman)
 - sent the requests using Python requests module
 
 ### Step 4 - Parsed API responses
