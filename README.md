@@ -45,7 +45,7 @@ referred to https://www.yelp.com/developers/documentation/v3/business_search to 
 - defined a function create_connection() that accepts the path to a SQLite database
 - defined a function execute_query() to execute the given query
 - created each table and inserted values
-- performed (SQL queries)[data/queries.sql] to confirm tables were created properly and could be joined on corresponding primary and foreign keys
+- performed [SQL queries](data/queries.sql) to confirm tables were created properly and could be joined on corresponding primary and foreign keys
 - one major challenge here was that the categories in the API response were sometimes listed with a leading space and other times not. In order to create a unique list for my category dataframe, I first had to strip those leading spaces.
 
 ### Step 9 - Compared Results from FourSquare and Yelp API
