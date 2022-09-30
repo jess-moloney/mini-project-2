@@ -35,19 +35,22 @@ referred to https://www.yelp.com/developers/documentation/v3/business_search to 
 - used .shape, .info() and .describe() to understand the size and contents of my dataframes
 
 ### Step 7 - Created Entity-Relationship Diagram
-- identified key entities (e.g., POI, category, location, phone number) and their attributes, then sketched an ERD and identified the relationships between entities and the cardinality of those relationships
+- identified key entities (e.g., POI, category, location, phone number) and their attributes, then sketched an and identified the relationships between entities and the cardinality of those relationships 
+- I ran out of time to add a location table, but I would have added this as a separate entity and joined it to the poi table.
+
+    ![My Image](images/mini-project-2-erd.jpg)
 
 ### Step 8 - Created SQLite Database
 - sliced original dataframes to create a new dataframe corresponding with each entity (POI, categories, location, phone number, & a POI_category intersection table to join POI and categories, allowing for a many-to-many relationship between POI and category)
 - defined a function create_connection() that accepts the path to a SQLite database
 - defined a function execute_query() to execute the given query
 - created each table and inserted values
-- performed SQL queries in the data/queries.sql file to confirm tables were created properly and could be joined on corresponding primary and foreign keys
+- performed (SQL queries)[data/queries.sql] to confirm tables were created properly and could be joined on corresponding primary and foreign keys
 - one major challenge here was that the categories in the API response were sometimes listed with a leading space and other times not. In order to create a unique list for my category dataframe, I first had to strip those leading spaces.
 
 ### Step 9 - Compared Results from FourSquare and Yelp API
 - used pandas to describe, sort, and group data to compare the quality of the coverage of the two APIs
-- examined number of results, number of attributes for each result, and corresponding insights that can be 
+- examined number of results, number of attributes for each result, and corresponding insights that can be discovered.
 
 ## Results
 - Overall, the Yelp API coverage for Ladysmith is more extensive than the FourSquare coverage for the same area, in terms of:
